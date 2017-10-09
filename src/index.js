@@ -121,11 +121,7 @@ const walk = (nodes = [], input, ctx = {}) => {
     }, ctx);
 
   const walkArr = () =>
-    nodes
-      .map(node => {
-        return onNode(node, ctx, null);
-      }, ctx)
-      .filter(Boolean);
+    nodes.map(node => onNode(node, ctx, null), ctx).filter(Boolean);
 
   return Array.isArray(ctx) ? walkArr() : walkObj();
 };

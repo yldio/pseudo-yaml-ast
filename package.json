@@ -1,6 +1,6 @@
 {
   "name": "pseudo-yaml-ast",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "license": "MPL-2.0",
   "description": "Parse a YAML string into an object with location properties",
   "keywords": [
@@ -23,6 +23,7 @@
   "files": ["dist"],
   "scripts": {
     "lint": "eslint . --fix",
+    "fmt": "prettier --write --single-quote src/*.js",
     "test:run": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text ava",
     "test-ci:run": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text ava",
     "test": "redrun build test:run",
@@ -41,7 +42,7 @@
     "babel-plugin-istanbul": "^4.1.5",
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.26.0",
-    "bup": "^1.0.9",
+    "bup": "^2.0.5",
     "cross-env": "^5.0.5",
     "eslint": "^4.8.0",
     "eslint-config-joyent-portal": "3.0.0",
