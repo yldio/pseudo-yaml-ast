@@ -1,6 +1,6 @@
 {
   "name": "pseudo-yaml-ast",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "license": "MPL-2.0",
   "description": "Parse a YAML string into an object with location properties",
   "keywords": [
