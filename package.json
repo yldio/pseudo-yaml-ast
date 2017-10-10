@@ -1,6 +1,6 @@
 {
   "name": "pseudo-yaml-ast",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "license": "MPL-2.0",
   "description": "Parse a YAML string into an object with location properties",
   "keywords": [
@@ -20,14 +20,13 @@
   "jsnext:main": "dist/pseudo-yaml-ast.es.js",
   "module": "dist/pseudo-yaml-ast.es.js",
   "entry": "src/index.js",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "lint": "eslint . --fix",
     "fmt": "prettier --write --single-quote src/*.js",
-    "test:run": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text ava",
-    "test-ci:run": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text ava",
-    "test": "redrun build test:run",
-    "test-ci": "redrun build test-ci:run",
+    "test": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text ava",
     "build": "bup",
     "prepublish": "bup"
   },
@@ -39,16 +38,24 @@
   },
   "devDependencies": {
     "ava": "^0.22.0",
+    "babel-eslint": "^8.0.1",
     "babel-plugin-istanbul": "^4.1.5",
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.26.0",
     "bup": "^2.0.5",
     "cross-env": "^5.0.5",
     "eslint": "^4.8.0",
-    "eslint-config-joyent-portal": "3.0.0",
+    "eslint-config-joyent-portal": "3.1.0",
+    "eslint-config-prettier": "^2.6.0",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-config-xo-space": "^0.16.0",
+    "eslint-plugin-flowtype": "^2.39.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^2.3.1",
+    "eslint-plugin-react": "^7.4.0",
     "nyc": "^11.2.1",
-    "redrun": "^5.9.18",
-    "tap-xunit": "^1.7.0"
+    "prettier": "^1.7.4"
   },
   "nyc": {
     "sourceMap": false,
@@ -56,7 +63,9 @@
   },
   "ava": {
     "tap": true,
-    "require": ["babel-register"],
+    "require": [
+      "babel-register"
+    ],
     "babel": "inherit"
   }
 }
