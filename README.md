@@ -1,10 +1,9 @@
 # pseudo-yaml-ast
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/yldio/pseudo-yaml-ast.svg)](https://greenkeeper.io/)
-
 [![npm](https://img.shields.io/npm/v/pseudo-yaml-ast.svg?style=flat-square)](https://www.npmjs.com/package/pseudo-yaml-ast)
 [![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg?style=flat-square)](https://opensource.org/licenses/MPL-2.0)
 [![standard-readme compliant](https://img.shields.io/badge/standard--readme-OK-green.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
+[![Greenkeeper badge](https://img.shields.io/badge/greenkeeper-enabled-brightgreen.svg?style=flat-square)](https://greenkeeper.io/)
 
 [![David](https://img.shields.io/david/yldio/pseudo-yaml-ast.svg?style=flat-square)](https://david-dm.org/yldio/pseudo-yaml-ast)
 [![David](https://img.shields.io/david/dev/yldio/pseudo-yaml-ast.svg?style=flat-square)](https://david-dm.org/yldio/pseudo-yaml-ast?type=dev)
