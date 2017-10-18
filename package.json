@@ -42,7 +42,7 @@
     "has-own-prop": "^1.0.0",
     "lodash.isnull": "^3.0.0",
     "lodash.isundefined": "^3.0.1",
-    "yaml-ast-parser": "0.0.36"
+    "yaml-ast-parser": "0.0.37"
   },
   "devDependencies": {
     "ava": "^0.22.0",
