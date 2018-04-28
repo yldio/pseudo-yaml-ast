@@ -26,7 +26,7 @@ const getLoc = (input, { start = 0, end = 0 }) => {
   for (const i of lines.keys()) {
     const line = lines[i];
     const ls = sum;
-    const le = sum + line.length + 1; // +1 because the break is also a char
+    const le = sum + line.length;
 
     if (isUndefined(loc.start.line) && isBetween(ls, start, le)) {
       loc.start.line = i + 1;
@@ -38,7 +38,7 @@ const getLoc = (input, { start = 0, end = 0 }) => {
       loc.end.column = end - ls;
     }
 
-    sum = le;
+    sum = le + 1; // +1 because the break is also a char
   }
 
   return loc;
