@@ -11,6 +11,8 @@ const isPrimitive = v =>
 const isPrimitiveNode = node =>
   isPrimitive(node.value) || !hasOwnProp(node, 'value');
 
+const isBetween = (start, pos, end) => pos <= end && pos >= start;
+
 const getLoc = (input, { start = 0, end = 0 }) => {
   const lines = input.split(/\n/);
 
@@ -18,8 +20,6 @@ const getLoc = (input, { start = 0, end = 0 }) => {
     start: {},
     end: {}
   };
-
-  const isBetween = (start, pos, end) => pos <= end && pos >= start;
 
   let sum = 0;
 
