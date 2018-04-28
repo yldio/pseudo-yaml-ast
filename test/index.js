@@ -64,6 +64,67 @@ const testCases = [{
       end: {line: 12, column: 6}
     },
   }]
+}, {
+  name: 'tree with no leading whitespace',
+  input: `obj:
+  arr:
+  - nums:
+    - 1
+    - 2
+    - 3
+    strs1:
+    - '1'
+    - '2'
+    - '3'
+  str: '1'
+  num: 1
+`,
+  nodesToCheck: [{
+    path: [],
+    expectedKeys: ['obj'],
+    expectedLoc: {
+      start: {line: 1, column: 0},
+      end: {line: 13, column: 0}
+    },
+  }, {
+    path: ['obj'],
+    expectedKeys: ['arr', 'str', 'num'],
+    expectedLoc: {
+      start: {line: 1, column: 0},
+      end: {line: 12, column: 8}
+    },
+  }, {
+    path: ['obj', 'str'],
+    expectedLoc: {
+      start: {line: 11, column: 2},
+      end: {line: 11, column: 10}
+    },
+  }, {
+    path: ['obj', 'num'],
+    expectedLoc: {
+      start: {line: 12, column: 2},
+      end: {line: 12, column: 8}
+    },
+  }, {
+    path: ['obj', 'arr', 0],
+    expectedKeys: ['nums', 'strs1'],
+    expectedLoc: {
+      start: {line: 3, column: 4},
+      end: {line: 11, column: 2}
+    },
+  }, {
+    path: ['obj', 'arr', 0, 'nums'],
+    expectedLoc: {
+      start: {line: 3, column: 4},
+      end: {line: 7, column: 4}
+    },
+  }, {
+    path: ['obj', 'arr', 0, 'strs1'],
+    expectedLoc: {
+      start: {line: 7, column: 4},
+      end: {line: 11, column: 2}
+    },
+  }]
 }];
 
 testCases.forEach(testCase => {
