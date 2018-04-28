@@ -62,6 +62,7 @@
     "eslint-plugin-markdown": "^1.0.0-beta.6",
     "eslint-plugin-prettier": "^2.3.1",
     "eslint-plugin-react": "^7.4.0",
+    "lodash.get": "^4.4.2",
     "npm-run-all": "^4.1.1",
     "nyc": "^11.2.1",
     "prettier": "^1.7.4"
